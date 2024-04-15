@@ -6,15 +6,15 @@ st.set_page_config(layout='wide')
 st.title('Customize the Data')
 
 st.write('### Upload files')
-files = st.file_uploader('Upload your file')
+file = st.file_uploader('Upload your file')
 
 def distinctcount(x):
     return x.nunique()
 
 # Check if files are uploaded
-if files:
+if file:
     # Read the first file to get the column names
-    first_file = pd.read_excel(files[0])
+    first_file = pd.read_excel(file)
     column_names = first_file.columns.tolist()
     
     # Display the list of column names in a list format
