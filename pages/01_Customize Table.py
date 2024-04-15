@@ -45,7 +45,7 @@ if file:
         
                 
         # Apply aggregation based on user selection
-        result = pd.concat([pd.read_excel(file) for file in files]).groupby(group_by_columns).agg(agg_dict).reset_index()
+        result = pd.concat([pd.read_excel(file) for file in file]).groupby(group_by_columns).agg(agg_dict).reset_index()
         
         
         st.write(result)
