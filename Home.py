@@ -4,7 +4,7 @@ from io import BytesIO
 
 def merge_workbooks(files):
     # Load workbooks
-    dfs = [pd.read_excel(file, engine='openpyxl') for file in files]
+    dfs = [pd.read_csv(file) for file in files]
     
     # Merge dataframes
     merged_df = pd.concat(dfs, ignore_index=True)
