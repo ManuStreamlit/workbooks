@@ -16,7 +16,7 @@ def main():
     st.title("Merge Workbooks")
 
     # Upload files
-    uploaded_files = st.file_uploader("Upload your Excel files", type=["xlsx", "xls"], accept_multiple_files=True)
+    uploaded_files = st.file_uploader("Upload your Excel files", type=["xlsx", "xls","csv"], accept_multiple_files=True)
     
     if uploaded_files:
         st.write(f"Uploaded {len(uploaded_files)} files:")
